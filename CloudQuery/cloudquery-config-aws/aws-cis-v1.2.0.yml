@@ -1,0 +1,31 @@
+kind: source
+spec:
+  name: "aws-cis"
+  path: "cloudquery/aws"
+  version: "v22.0.0"
+  tables:
+    - aws_cloudtrail_trail_event_selectors
+    - aws_cloudtrail_trails
+    - aws_cloudwatch_alarms
+    - aws_cloudwatchlogs_metric_filters
+    - aws_ec2_flow_logs
+    - aws_ec2_security_groups
+    - aws_ec2_vpcs
+    - aws_iam_credential_reports
+    - aws_iam_password_policies
+    - aws_iam_user_access_keys
+    - aws_iam_users
+    - aws_iam_virtual_mfa_devices
+    - aws_kms_keys
+    - aws_s3_buckets
+    - aws_sns_subscriptions
+  destinations: ["postgresql"]
+  spec:
+    regions:
+      - ap-southeast-2
+    aws_debug: false
+    org:
+      admin_account:
+        # make sure you have created local aws config, reference aws-config-<env> file
+        local_profile: cloudquery
+      member_role_name: cloudquery-ro

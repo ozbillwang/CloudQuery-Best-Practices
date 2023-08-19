@@ -1,0 +1,97 @@
+kind: source
+spec:
+  name: "aws-foundation-security-best-practices"
+  path: "cloudquery/aws"
+  version: "v22.0.0"
+  tables:
+  - aws_account_alternate_contacts
+  - aws_acm_certificates
+  - aws_apigateway_rest_api_stages
+  - aws_apigateway_rest_apis
+  - aws_apigatewayv2_api_stages
+  - aws_apigatewayv2_apis
+  - aws_applicationautoscaling_policies
+  - aws_autoscaling_groups
+  - aws_cloudfront_distributions
+  - aws_cloudtrail_trail_event_selectors
+  - aws_cloudtrail_trails
+  - aws_codebuild_projects
+  - aws_config_configuration_recorders
+  - aws_dax_clusters
+  - aws_dms_replication_instances
+  - aws_dynamodb_table_continuous_backups
+  - aws_dynamodb_table_replica_auto_scalings
+  - aws_dynamodb_tables
+  - aws_ec2_ebs_snapshot_attributes
+  - aws_ec2_ebs_snapshots
+  - aws_ec2_ebs_volumes
+  - aws_ec2_flow_logs
+  - aws_ec2_instances
+  - aws_ec2_network_acls
+  - aws_ec2_regional_configs
+  - aws_ec2_security_groups
+  - aws_ec2_subnets
+  - aws_ec2_vpc_endpoints
+  - aws_ec2_vpcs
+  - aws_ecs_cluster_services
+  - aws_ecs_clusters
+  - aws_ecs_task_definitions
+  - aws_efs_filesystems
+  - aws_elasticbeanstalk_configuration_settings
+  - aws_elasticbeanstalk_environments
+  - aws_elasticsearch_domains
+  - aws_elbv1_load_balancers
+  - aws_elbv2_listeners
+  - aws_elbv2_load_balancer_attributes
+  - aws_elbv2_load_balancers
+  - aws_emr_clusters
+  - aws_guardduty_detectors
+  - aws_iam_accounts
+  - aws_iam_credential_reports
+  - aws_iam_group_policies
+  - aws_iam_groups
+  - aws_iam_password_policies
+  - aws_iam_policies
+  - aws_iam_role_policies
+  - aws_iam_roles
+  - aws_iam_user_access_keys
+  - aws_iam_user_attached_policies
+  - aws_iam_user_policies
+  - aws_iam_users
+  - aws_iam_virtual_mfa_devices
+  - aws_kms_keys
+  - aws_lambda_functions
+  - aws_lambda_runtimes
+  - aws_rds_cluster_snapshots
+  - aws_rds_clusters
+  - aws_rds_db_parameter_groups
+  - aws_rds_db_security_groups
+  - aws_rds_db_snapshots
+  - aws_rds_event_subscriptions
+  - aws_rds_instances
+  - aws_redshift_cluster_parameter_groups
+  - aws_redshift_cluster_parameters
+  - aws_redshift_clusters
+  - aws_regions
+  - aws_s3_accounts
+  - aws_s3_bucket_encryption_rules
+  - aws_s3_bucket_grants
+  - aws_s3_buckets
+  - aws_sagemaker_notebook_instances
+  - aws_secretsmanager_secrets
+  - aws_sns_topics
+  - aws_sqs_queues
+  - aws_ssm_documents
+  - aws_ssm_instance_compliance_items
+  - aws_ssm_instances
+  - aws_waf_web_acls
+  destinations: ["postgresql"]
+  spec:
+    regions:
+      - ap-southeast-2
+    aws_debug: false
+    org:
+      admin_account:
+        # make sure you have created local aws config, reference aws-config-<env> file
+        local_profile: cloudquery
+      member_role_name: cloudquery-ro

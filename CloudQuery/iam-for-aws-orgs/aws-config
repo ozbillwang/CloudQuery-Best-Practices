@@ -1,0 +1,2 @@
+[profile cloudquery]
+    role_arn = arn:aws:iam::<account_id>:role/cloudquery-mgmt-ro
