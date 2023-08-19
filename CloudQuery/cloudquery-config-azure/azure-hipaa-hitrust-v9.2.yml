@@ -1,0 +1,63 @@
+kind: source
+spec:
+  # Source spec section
+  name: "azure-hipaa-hitrust-v9.2"
+  path: "cloudquery/azure"
+  version: "v9.0.2"
+  destinations: ["postgresql"]
+  concurrency: 10000
+  tables:
+  - azure_appservice_web_app_vnet_connections
+  - azure_appservice_web_apps
+  - azure_authorization_role_assignments
+  - azure_authorization_role_definitions
+  - azure_batch_account
+  - azure_compute_virtual_machine_extensions
+  - azure_compute_virtual_machine_scale_sets
+  - azure_compute_virtual_machines
+  - azure_containerregistry_registries
+  - azure_containerservice_managed_clusters
+  - azure_cosmos_database_accounts
+  - azure_datalakestore_accounts
+  - azure_eventhub_namespace_network_rule_sets
+  - azure_eventhub_namespaces
+  - azure_keyvault_keyvault
+  - azure_keyvault_keyvault_managed_hsms
+  - azure_logic_workflows
+  - azure_mariadb_servers
+  - azure_monitor_activity_log_alerts
+  - azure_monitor_diagnostic_settings
+  - azure_monitor_log_profiles
+  - azure_monitor_resources
+  - azure_mysql_servers
+  - azure_network_interfaces
+  - azure_network_security_groups
+  - azure_network_virtual_networks
+  - azure_network_watchers
+  - azure_postgresql_servers
+  - azure_redis_caches
+  - azure_resources_links
+  - azure_search_services
+  - azure_security_assessments
+  - azure_security_auto_provisioning_settings
+  - azure_security_jit_network_access_policies
+  - azure_sql_managed_instance_encryption_protectors
+  - azure_sql_managed_instance_vulnerability_assessments
+  - azure_sql_managed_instances
+  - azure_sql_server_blob_auditing_policies
+  - azure_sql_server_database_long_term_retention_policies
+  - azure_sql_server_database_vulnerability_assessment_scans
+  - azure_sql_server_database_vulnerability_assessments
+  - azure_sql_server_databases
+  - azure_sql_server_encryption_protectors
+  - azure_sql_server_virtual_network_rules
+  - azure_sql_server_vulnerability_assessments
+  - azure_sql_servers
+  - azure_sql_transparent_data_encryptions
+  - azure_storage_accounts
+  - azure_streamanalytics_streaming_jobs
+  - azure_subscription_subscription_locations
+  - azure_subscription_subscriptions
+  spec:
+    # Azure Spec section
+    subscriptions: []

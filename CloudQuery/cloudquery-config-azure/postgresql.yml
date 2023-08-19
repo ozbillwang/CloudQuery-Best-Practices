@@ -1,0 +1,10 @@
+kind: destination
+spec:
+  name: "postgresql"
+  path: "cloudquery/postgresql"
+  version: "v5.0.1"
+  #write_mode: "append"
+  write_mode: "overwrite-delete-stale"
+  migrate_mode: forced # recommended, when upgrade with new version of plugins
+  spec:
+    connection_string: "${PG_CONNECTION_STRING}"
