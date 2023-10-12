@@ -1,0 +1,26 @@
+kind: source
+spec:
+  name: "aws-organizations"
+  path: "cloudquery/aws"
+  version: "v22.12.0"
+  tables:
+  - aws_organizations
+  - aws_organizations_accounts
+  - aws_organizations_account_parents
+  - aws_organizations_delegated_services
+  - aws_organizations_delegated_administrators
+  - aws_organizations_organizational_units
+  - aws_organizations_organizational_unit_parents
+  - aws_organizations_policies
+  - aws_organizations_roots
+  destinations: ["postgresql"]
+  spec:
+    # don't limit the regions when sync tables for AWS Organization
+    # regions:
+    #   - ap-southeast-2
+    # aws_debug: false
+    org:
+      admin_account:
+        # make sure you have created local aws config, reference aws-config-<env> file
+        local_profile: cloudquery
+      member_role_name: cloudquery-ro

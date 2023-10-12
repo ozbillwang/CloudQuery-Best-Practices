@@ -2,7 +2,7 @@ kind: source
 spec:
   name: "aws-pci-dss"
   path: "cloudquery/aws"
-  version: "v22.0.0"
+  version: "v22.12.0"
   tables:
   - aws_autoscaling_groups
   - aws_cloudtrail_trail_event_selectors

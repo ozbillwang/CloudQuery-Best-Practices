@@ -1,0 +1,30 @@
+kind: source
+spec:
+  name: "aws-securityhub"
+  path: "cloudquery/aws"
+  version: "v22.12.0"
+  tables:
+  - aws_securityhub_enabled_standards
+  - aws_securityhub_findings
+  - aws_securityhub_hubs
+  destinations: ["postgresql"]
+  spec:
+    regions: 
+      - ap-southeast-2
+    aws_debug: false
+    org:
+      admin_account:
+        # make sure you have created local aws config, reference aws-config-<env> file
+        local_profile: cloudquery
+      member_role_name: cloudquery-ro
+    table_options:
+      aws_securityhub_findings:
+        get_findings:
+          - filters:
+              created_at:
+              - date_range:
+                  unit: DAYS
+                  value: 14
+              record_state:
+              - value: ACTIVE
+                comparison: EQUALS
