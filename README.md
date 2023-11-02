@@ -1,8 +1,8 @@
-# CloudQuery best practices
+# Best Practices for CloudQuery
 
-with CloudQuery Configuration for reference (AWS and Azure)
+Including Reference CloudQuery Configuration for AWS and Azure
 
-### Follow up documents
+### Stay tuned for follow-up documents.
 
 [CloudQuery best practices — role and permissions on AWS](https://medium.com/@ozbillwang/cloudquery-best-practices-role-and-permissions-on-aws-6a3b5fcd8678)
 
