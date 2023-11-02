@@ -6,4 +6,4 @@ with CloudQuery Configuration for reference (AWS and Azure)
 
 [CloudQuery best practices — role and permissions on AWS](https://medium.com/@ozbillwang/cloudquery-best-practices-role-and-permissions-on-aws-6a3b5fcd8678)
 
-CloudQuery best practices — role and permissions on Azure (coming)
+[CloudQuery best practices — role and permissions on Azure](https://medium.com/@ozbillwang/cloudquery-best-practices-role-and-permissions-on-azure-f567919b3994)
